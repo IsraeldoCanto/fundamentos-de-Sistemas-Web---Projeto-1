@@ -73,7 +73,7 @@ O site possui **4 páginas** interligadas por navegação:
 
 ## Como Acessar
 
-1. Acesse o link do GitHub Pages: *(será adicionado após publicação)*
+1. Acesse o link do GitHub Pages: [https://israeldocanto.github.io/fundamentos-de-Sistemas-Web---Projeto-1/](https://israeldocanto.github.io/fundamentos-de-Sistemas-Web---Projeto-1/)
 2. Navegue pelo menu no topo de qualquer página
 3. Explore os produtos, serviços e informações do pet shop
 
