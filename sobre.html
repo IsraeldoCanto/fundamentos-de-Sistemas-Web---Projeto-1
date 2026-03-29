@@ -3,34 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça a história, missão e equipe do PetShop Amigo Fiel">
     <title>PetShop Amigo Fiel - Sobre Nós</title>
+    <!-- Bootstrap CSS local -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- CABEÇALHO -->
-    <header>
-        <h1>🐾 PetShop Amigo Fiel</h1>
-        <p>Tudo para o bem-estar do seu pet!</p>
-        <hr>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="sobre.html">Sobre Nós</a> |
-            <a href="contato.html">Contato</a>
-        </nav>
-        <hr>
-    </header>
+    <!-- Link de acessibilidade: pular para o conteúdo principal -->
+    <a href="#conteudo-principal" class="skip-nav" aria-label="Pular para o conteúdo principal">Pular para o conteúdo</a>
 
-    <!-- CORPO DA PÁGINA -->
-    <main>
+    <!-- BARRA DE SAUDAÇÃO E RELÓGIO -->
+    <div id="saudacao" role="status" aria-live="polite">Carregando...</div>
+
+    <!-- NAVBAR BOOTSTRAP -->
+    <nav class="navbar navbar-expand-lg navbar-dark" role="navigation" aria-label="Menu principal">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🐾 PetShop Amigo Fiel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" aria-label="Página Inicial">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html" aria-label="Nossos Serviços">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro.html" aria-label="Cadastro de Cliente e Pet">Cadastro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agendamento.html" aria-label="Agendamento de Serviço">Agendamento</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="sobre.html" aria-label="Sobre Nós">Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html" aria-label="Entre em Contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="conteudo-principal" class="container secao-conteudo" role="main">
         <h2>Sobre o PetShop Amigo Fiel</h2>
 
+        <!-- Nossa História -->
         <h3>Nossa História</h3>
         <p>O PetShop Amigo Fiel nasceu em 2015, da paixão de seus fundadores pelos animais. Começamos como uma pequena loja de bairro e, ao longo dos anos, crescemos e nos tornamos referência na região em cuidados e produtos para pets.</p>
 
+        <!-- Missão -->
         <h3>Nossa Missão</h3>
         <p>Proporcionar produtos de qualidade e serviços especializados para o bem-estar dos animais de estimação, tratando cada pet com o carinho e a atenção que eles merecem.</p>
 
+        <!-- Valores -->
         <h3>Nossos Valores</h3>
         <ul>
             <li><strong>Amor aos animais:</strong> Cada pet é tratado como se fosse nosso.</li>
@@ -39,52 +60,84 @@
             <li><strong>Responsabilidade:</strong> Apoiamos causas de proteção animal e adoção responsável.</li>
         </ul>
 
+        <!-- Equipe -->
         <h3>Nossa Equipe</h3>
         <p>Contamos com uma equipe de profissionais apaixonados por animais:</p>
-        <ul>
-            <li><strong>Dr. Carlos Mendes</strong> - Médico Veterinário (CRMV-SP 12345)</li>
-            <li><strong>Ana Paula Silva</strong> - Tosadora Profissional</li>
-            <li><strong>Roberto Santos</strong> - Adestrador Certificado</li>
-            <li><strong>Maria Oliveira</strong> - Atendente e Responsável pela Loja</li>
-        </ul>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 mb-3">
+                <div class="card text-center p-3">
+                    <h5 class="card-title">Dr. Carlos Mendes</h5>
+                    <p class="card-text">Médico Veterinário<br><small>CRMV-SP 12345</small></p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+                <div class="card text-center p-3">
+                    <h5 class="card-title">Ana Paula Silva</h5>
+                    <p class="card-text">Tosadora Profissional</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+                <div class="card text-center p-3">
+                    <h5 class="card-title">Roberto Santos</h5>
+                    <p class="card-text">Adestrador Certificado</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+                <div class="card text-center p-3">
+                    <h5 class="card-title">Maria Oliveira</h5>
+                    <p class="card-text">Atendente e Responsável</p>
+                </div>
+            </div>
+        </div>
 
+        <!-- Horário de Funcionamento -->
         <h3>Horário de Funcionamento</h3>
-        <table border="1" cellpadding="8" cellspacing="0">
-            <tr>
-                <th>Dia</th>
-                <th>Horário</th>
-            </tr>
-            <tr>
-                <td>Segunda a Sexta</td>
-                <td>08:00 - 19:00</td>
-            </tr>
-            <tr>
-                <td>Sábado</td>
-                <td>08:00 - 17:00</td>
-            </tr>
-            <tr>
-                <td>Domingo e Feriados</td>
-                <td>09:00 - 13:00</td>
-            </tr>
+        <table class="table table-striped table-bordered" style="max-width: 400px;">
+            <thead>
+                <tr>
+                    <th>Dia</th>
+                    <th>Horário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Segunda a Sexta</td>
+                    <td>08:00 - 19:00</td>
+                </tr>
+                <tr>
+                    <td>Sábado</td>
+                    <td>08:00 - 17:00</td>
+                </tr>
+                <tr>
+                    <td>Domingo e Feriados</td>
+                    <td>09:00 - 13:00</td>
+                </tr>
+            </tbody>
         </table>
     </main>
 
-    <br>
-
     <!-- RODAPÉ -->
-    <footer>
-        <hr>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="sobre.html">Sobre Nós</a> |
-            <a href="contato.html">Contato</a>
-        </nav>
-        <br>
-        <p>📍 Endereço: Rua dos Animais, 123 - Centro, São Paulo - SP</p>
-        <p>📞 Telefone: (11) 1234-5678 | 📧 E-mail: contato@amigofiel.com.br</p>
-        <p><small>&copy; 2026 PetShop Amigo Fiel - Todos os direitos reservados.</small></p>
+    <footer role="contentinfo">
+        <div class="container text-center">
+            <nav aria-label="Menu do rodapé">
+                <a href="index.html">Início</a> |
+                <a href="servicos.html">Serviços</a> |
+                <a href="cadastro.html">Cadastro</a> |
+                <a href="agendamento.html">Agendamento</a> |
+                <a href="sobre.html">Sobre Nós</a> |
+                <a href="contato.html">Contato</a>
+            </nav>
+            <br>
+            <p>📍 Endereço: Rua dos Animais, 123 - Centro, São Paulo - SP</p>
+            <p>📞 Telefone: (11) 1234-5678 | 📧 E-mail: contato@amigofiel.com.br</p>
+            <p><small>&copy; <span id="ano-atual">2026</span> PetShop Amigo Fiel - Todos os direitos reservados.</small></p>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS local -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript customizado -->
+    <script src="js/main.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cadastro de cliente e pet no PetShop Amigo Fiel">
+    <title>PetShop Amigo Fiel - Cadastro</title>
+    <!-- Bootstrap CSS local -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Link de acessibilidade: pular para o conteúdo principal -->
+    <a href="#conteudo-principal" class="skip-nav" aria-label="Pular para o conteúdo principal">Pular para o conteúdo</a>
+
+    <!-- BARRA DE SAUDAÇÃO E RELÓGIO -->
+    <div id="saudacao" role="status" aria-live="polite">Carregando...</div>
+
+    <!-- NAVBAR BOOTSTRAP -->
+    <nav class="navbar navbar-expand-lg navbar-dark" role="navigation" aria-label="Menu principal">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🐾 PetShop Amigo Fiel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" aria-label="Página Inicial">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html" aria-label="Nossos Serviços">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="cadastro.html" aria-label="Cadastro de Cliente e Pet">Cadastro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agendamento.html" aria-label="Agendamento de Serviço">Agendamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html" aria-label="Sobre Nós">Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html" aria-label="Entre em Contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="conteudo-principal" class="container secao-conteudo" role="main">
+        <h2>Cadastro de Cliente e Pet</h2>
+        <p>Preencha o formulário abaixo para se cadastrar e registrar seu pet. Todos os campos marcados com <strong>*</strong> são obrigatórios.</p>
+
+        <form id="form-cadastro">
+
+            <!-- ===================== DADOS DO CLIENTE ===================== -->
+            <div class="formulario-secao">
+                <h3>📋 Dados do Cliente</h3>
+
+                <!-- Nome Completo -->
+                <div class="mb-3">
+                    <label for="nome-cliente" class="form-label"><strong>Nome Completo: *</strong></label>
+                    <input type="text" class="form-control" id="nome-cliente" name="nome-cliente"
+                           placeholder="Digite seu nome completo" required>
+                </div>
+
+                <!-- CPF -->
+                <div class="mb-3">
+                    <label for="cpf-cliente" class="form-label"><strong>CPF: *</strong></label>
+                    <input type="text" class="form-control" id="cpf-cliente" name="cpf-cliente"
+                           placeholder="000.000.000-00" required maxlength="14">
+                </div>
+
+                <!-- E-mail -->
+                <div class="mb-3">
+                    <label for="email-cliente" class="form-label"><strong>E-mail: *</strong></label>
+                    <input type="email" class="form-control" id="email-cliente" name="email-cliente"
+                           placeholder="seuemail@exemplo.com" required>
+                </div>
+
+                <!-- Telefone -->
+                <div class="mb-3">
+                    <label for="telefone-cliente" class="form-label"><strong>Telefone: *</strong></label>
+                    <input type="tel" class="form-control" id="telefone-cliente" name="telefone-cliente"
+                           placeholder="(11) 91234-5678" required>
+                </div>
+
+                <!-- Endereço -->
+                <div class="mb-3">
+                    <label for="endereco-cliente" class="form-label"><strong>Endereço: *</strong></label>
+                    <input type="text" class="form-control" id="endereco-cliente" name="endereco-cliente"
+                           placeholder="Rua, número, bairro, cidade - estado" required>
+                </div>
+
+                <!-- Sexo (Radio Buttons) -->
+                <div class="mb-3">
+                    <label class="form-label"><strong>Sexo: *</strong></label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sexo-cliente" id="sexo-masculino" value="Masculino">
+                        <label class="form-check-label" for="sexo-masculino">Masculino</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sexo-cliente" id="sexo-feminino" value="Feminino">
+                        <label class="form-check-label" for="sexo-feminino">Feminino</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sexo-cliente" id="sexo-outro" value="Outro">
+                        <label class="form-check-label" for="sexo-outro">Outro</label>
+                    </div>
+                </div>
+
+                <!-- Checkbox: Aceita promoções -->
+                <div class="mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="promocoes-cliente" name="promocoes-cliente" value="sim">
+                        <label class="form-check-label" for="promocoes-cliente">Desejo receber promoções por e-mail</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===================== DADOS DO PET ===================== -->
+            <div class="formulario-secao">
+                <h3>🐶 Dados do Pet</h3>
+
+                <!-- Nome do Pet -->
+                <div class="mb-3">
+                    <label for="nome-pet" class="form-label"><strong>Nome do Pet: *</strong></label>
+                    <input type="text" class="form-control" id="nome-pet" name="nome-pet"
+                           placeholder="Nome do seu pet" required>
+                </div>
+
+                <!-- Espécie (Select) -->
+                <div class="mb-3">
+                    <label for="especie-pet" class="form-label"><strong>Espécie: *</strong></label>
+                    <select class="form-select" id="especie-pet" name="especie-pet" required>
+                        <option value="">Selecione a espécie</option>
+                        <option value="Cão">Cão</option>
+                        <option value="Gato">Gato</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+
+                <!-- Raça -->
+                <div class="mb-3">
+                    <label for="raca-pet" class="form-label"><strong>Raça: *</strong></label>
+                    <input type="text" class="form-control" id="raca-pet" name="raca-pet"
+                           placeholder="Raça do pet (ex: Labrador, Persa)" required>
+                </div>
+
+                <!-- Idade (Number) -->
+                <div class="mb-3">
+                    <label for="idade-pet" class="form-label"><strong>Idade (anos): *</strong></label>
+                    <input type="number" class="form-control" id="idade-pet" name="idade-pet"
+                           placeholder="Idade do pet em anos" required min="0" max="30" style="max-width: 200px;">
+                </div>
+            </div>
+
+            <!-- Botões -->
+            <button type="submit" class="btn btn-success btn-lg">Cadastrar</button>
+            <button type="reset" class="btn btn-secondary btn-lg">Limpar</button>
+
+        </form>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer role="contentinfo">
+        <div class="container text-center">
+            <nav aria-label="Menu do rodapé">
+                <a href="index.html">Início</a> |
+                <a href="servicos.html">Serviços</a> |
+                <a href="cadastro.html">Cadastro</a> |
+                <a href="agendamento.html">Agendamento</a> |
+                <a href="sobre.html">Sobre Nós</a> |
+                <a href="contato.html">Contato</a>
+            </nav>
+            <br>
+            <p>📍 Endereço: Rua dos Animais, 123 - Centro, São Paulo - SP</p>
+            <p>📞 Telefone: (11) 1234-5678 | 📧 E-mail: contato@amigofiel.com.br</p>
+            <p><small>&copy; <span id="ano-atual">2026</span> PetShop Amigo Fiel - Todos os direitos reservados.</small></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS local -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript customizado -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

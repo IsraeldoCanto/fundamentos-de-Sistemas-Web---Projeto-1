@@ -1,0 +1,176 @@
+/* ============================================
+   CSS Customizado - PetShop Amigo Fiel (Fase 2)
+   Complementa o Bootstrap com estilos do tema
+   ============================================ */
+
+/* Cores do tema */
+:root {
+    --cor-primaria: #2e7d32;
+    --cor-secundaria: #1565c0;
+    --cor-fundo: #f5f5f5;
+    --cor-texto: #333;
+    --cor-footer: #263238;
+}
+
+/* Reset básico */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+/* ===================== NAVBAR ===================== */
+/* Estilo customizado para a barra de navegação */
+.navbar {
+    background-color: var(--cor-primaria) !important;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* ===================== CARROSSEL ===================== */
+/* Ajuste da altura e das imagens do carrossel */
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/* ===================== SEÇÕES ===================== */
+/* Espaçamento e estilo das seções de conteúdo */
+.secao-conteudo {
+    padding: 30px 0;
+}
+
+.secao-conteudo h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--cor-primaria);
+    padding-bottom: 10px;
+}
+
+.secao-conteudo h3 {
+    color: var(--cor-secundaria);
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+/* ===================== CARDS DE PRODUTOS ===================== */
+/* Estilo dos cards usados para exibir produtos */
+.card {
+    border: 1px solid #ddd;
+    transition: transform 0.2s;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.card img {
+    height: 200px;
+    object-fit: contain;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.card-title {
+    color: var(--cor-primaria);
+    font-weight: bold;
+}
+
+.card .preco {
+    color: var(--cor-secundaria);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* ===================== TABELAS ===================== */
+/* Estilo para as tabelas de serviços e horários */
+.table thead {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+/* ===================== FORMULÁRIOS ===================== */
+/* Estilo para os formulários de cadastro e agendamento */
+.formulario-secao {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.formulario-secao h3 {
+    color: var(--cor-primaria);
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* ===================== FOOTER ===================== */
+/* Estilo do rodapé */
+footer {
+    background-color: var(--cor-footer);
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #81c784;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #a5d6a7;
+    text-decoration: underline;
+}
+
+/* ===================== SAUDAÇÃO E RELÓGIO ===================== */
+/* Estilo para o relógio e saudação dinâmica no topo */
+#saudacao {
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: var(--cor-secundaria);
+    padding: 5px 15px;
+    text-align: center;
+}
+
+/* ===================== ACESSIBILIDADE ===================== */
+/* Link para pular navegação (visível apenas com foco via teclado) */
+.skip-nav {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--cor-primaria);
+    color: #fff;
+    padding: 8px 16px;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.skip-nav:focus {
+    top: 0;
+}
+
+/* ===================== RESPONSIVIDADE ===================== */
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 200px;
+    }
+
+    .card img {
+        height: 150px;
+    }
+}

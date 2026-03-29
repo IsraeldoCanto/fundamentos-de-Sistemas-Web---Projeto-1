@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agende banho e tosa para seu pet no PetShop Amigo Fiel">
+    <title>PetShop Amigo Fiel - Agendamento</title>
+    <!-- Bootstrap CSS local -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Link de acessibilidade: pular para o conteúdo principal -->
+    <a href="#conteudo-principal" class="skip-nav" aria-label="Pular para o conteúdo principal">Pular para o conteúdo</a>
+
+    <!-- BARRA DE SAUDAÇÃO E RELÓGIO -->
+    <div id="saudacao" role="status" aria-live="polite">Carregando...</div>
+
+    <!-- NAVBAR BOOTSTRAP -->
+    <nav class="navbar navbar-expand-lg navbar-dark" role="navigation" aria-label="Menu principal">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🐾 PetShop Amigo Fiel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" aria-label="Página Inicial">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html" aria-label="Nossos Serviços">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro.html" aria-label="Cadastro de Cliente e Pet">Cadastro</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="agendamento.html" aria-label="Agendamento de Serviço">Agendamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html" aria-label="Sobre Nós">Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html" aria-label="Entre em Contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="conteudo-principal" class="container secao-conteudo" role="main">
+        <h2>Agendamento de Serviço</h2>
+        <p>Agende o serviço de banho e/ou tosa para seu pet. Escolha o serviço desejado, o método de entrega e selecione a data e horário.</p>
+
+        <form id="form-agendamento">
+
+            <!-- ===================== DADOS DO CLIENTE E PET ===================== -->
+            <div class="formulario-secao">
+                <h3>📋 Identificação</h3>
+
+                <!-- Nome do Cliente -->
+                <div class="mb-3">
+                    <label for="nome-agendamento" class="form-label"><strong>Nome do Cliente: *</strong></label>
+                    <input type="text" class="form-control" id="nome-agendamento" name="nome-agendamento"
+                           placeholder="Digite seu nome" required>
+                </div>
+
+                <!-- Nome do Pet -->
+                <div class="mb-3">
+                    <label for="pet-agendamento" class="form-label"><strong>Nome do Pet: *</strong></label>
+                    <input type="text" class="form-control" id="pet-agendamento" name="pet-agendamento"
+                           placeholder="Nome do seu pet" required>
+                </div>
+
+                <!-- Telefone -->
+                <div class="mb-3">
+                    <label for="telefone-agendamento" class="form-label"><strong>Telefone para contato: *</strong></label>
+                    <input type="tel" class="form-control" id="telefone-agendamento" name="telefone-agendamento"
+                           placeholder="(11) 91234-5678" required>
+                </div>
+            </div>
+
+            <!-- ===================== ESCOLHA DO SERVIÇO ===================== -->
+            <div class="formulario-secao">
+                <h3>✂️ Escolha do Serviço</h3>
+                <p>Selecione o(s) serviço(s) desejado(s):</p>
+
+                <!-- Serviço (Checkboxes para permitir combo) -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="servico-banho" name="servico" value="Banho">
+                    <label class="form-check-label" for="servico-banho">🛁 Banho - R$ 60,00</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="servico-tosa" name="servico" value="Tosa">
+                    <label class="form-check-label" for="servico-tosa">✂️ Tosa - R$ 80,00</label>
+                </div>
+            </div>
+
+            <!-- ===================== MÉTODO DE ENTREGA ===================== -->
+            <div class="formulario-secao">
+                <h3>🚗 Método de Agendamento</h3>
+                <p>Como deseja enviar/receber seu pet?</p>
+
+                <!-- Método (Radio Buttons) -->
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="metodo" id="metodo-telebusca" value="Tele-busca">
+                    <label class="form-check-label" for="metodo-telebusca">
+                        🚐 <strong>Tele-busca</strong> — Buscamos e devolvemos seu pet no endereço informado (grátis até 10km)
+                    </label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="metodo" id="metodo-local" value="Entrega no local">
+                    <label class="form-check-label" for="metodo-local">
+                        🏪 <strong>Entrega no local</strong> — Você traz e busca seu pet no nosso endereço
+                    </label>
+                </div>
+            </div>
+
+            <!-- ===================== DATA E HORÁRIO ===================== -->
+            <div class="formulario-secao">
+                <h3>📅 Data e Horário</h3>
+
+                <!-- Data (calendário HTML5) -->
+                <div class="mb-3">
+                    <label for="data-agendamento" class="form-label"><strong>Data do agendamento: *</strong></label>
+                    <input type="date" class="form-control" id="data-agendamento" name="data-agendamento"
+                           required style="max-width: 300px;">
+                </div>
+
+                <!-- Horário -->
+                <div class="mb-3">
+                    <label for="horario-agendamento" class="form-label"><strong>Horário: *</strong></label>
+                    <input type="time" class="form-control" id="horario-agendamento" name="horario-agendamento"
+                           min="08:00" max="18:00" required style="max-width: 200px;">
+                    <small class="text-muted">Horário de funcionamento: 08:00 às 18:00</small>
+                </div>
+            </div>
+
+            <!-- Botões -->
+            <button type="submit" class="btn btn-success btn-lg">Agendar Serviço</button>
+            <button type="reset" class="btn btn-secondary btn-lg">Limpar</button>
+
+        </form>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer role="contentinfo">
+        <div class="container text-center">
+            <nav aria-label="Menu do rodapé">
+                <a href="index.html">Início</a> |
+                <a href="servicos.html">Serviços</a> |
+                <a href="cadastro.html">Cadastro</a> |
+                <a href="agendamento.html">Agendamento</a> |
+                <a href="sobre.html">Sobre Nós</a> |
+                <a href="contato.html">Contato</a>
+            </nav>
+            <br>
+            <p>📍 Endereço: Rua dos Animais, 123 - Centro, São Paulo - SP</p>
+            <p>📞 Telefone: (11) 1234-5678 | 📧 E-mail: contato@amigofiel.com.br</p>
+            <p><small>&copy; <span id="ano-atual">2026</span> PetShop Amigo Fiel - Todos os direitos reservados.</small></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS local -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript customizado -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

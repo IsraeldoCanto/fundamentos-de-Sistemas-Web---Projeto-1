@@ -3,95 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com o PetShop Amigo Fiel - telefone, e-mail e formulário">
     <title>PetShop Amigo Fiel - Contato</title>
+    <!-- Bootstrap CSS local -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- CABEÇALHO -->
-    <header>
-        <h1>🐾 PetShop Amigo Fiel</h1>
-        <p>Tudo para o bem-estar do seu pet!</p>
-        <hr>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="sobre.html">Sobre Nós</a> |
-            <a href="contato.html">Contato</a>
-        </nav>
-        <hr>
-    </header>
+    <!-- Link de acessibilidade: pular para o conteúdo principal -->
+    <a href="#conteudo-principal" class="skip-nav" aria-label="Pular para o conteúdo principal">Pular para o conteúdo</a>
 
-    <!-- CORPO DA PÁGINA -->
-    <main>
+    <!-- BARRA DE SAUDAÇÃO E RELÓGIO -->
+    <div id="saudacao" role="status" aria-live="polite">Carregando...</div>
+
+    <!-- NAVBAR BOOTSTRAP -->
+    <nav class="navbar navbar-expand-lg navbar-dark" role="navigation" aria-label="Menu principal">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🐾 PetShop Amigo Fiel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" aria-label="Página Inicial">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html" aria-label="Nossos Serviços">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro.html" aria-label="Cadastro de Cliente e Pet">Cadastro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agendamento.html" aria-label="Agendamento de Serviço">Agendamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html" aria-label="Sobre Nós">Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contato.html" aria-label="Entre em Contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="conteudo-principal" class="container secao-conteudo" role="main">
         <h2>Entre em Contato</h2>
         <p>Ficou com dúvidas ou quer agendar um serviço? Entre em contato conosco!</p>
 
+        <!-- Informações de Contato -->
         <h3>Informações de Contato</h3>
-        <table border="1" cellpadding="8" cellspacing="0">
-            <tr>
-                <th>Canal</th>
-                <th>Informação</th>
-            </tr>
-            <tr>
-                <td>📍 Endereço</td>
-                <td>Rua dos Animais, 123 - Centro, São Paulo - SP - CEP: 01000-000</td>
-            </tr>
-            <tr>
-                <td>📞 Telefone</td>
-                <td>(11) 1234-5678</td>
-            </tr>
-            <tr>
-                <td>📱 WhatsApp</td>
-                <td>(11) 91234-5678</td>
-            </tr>
-            <tr>
-                <td>📧 E-mail</td>
-                <td>contato@amigofiel.com.br</td>
-            </tr>
-            <tr>
-                <td>📸 Instagram</td>
-                <td>@petshop.amigofiel</td>
-            </tr>
+        <table class="table table-striped table-bordered" style="max-width: 600px;">
+            <thead>
+                <tr>
+                    <th>Canal</th>
+                    <th>Informação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>📍 Endereço</td>
+                    <td>Rua dos Animais, 123 - Centro, São Paulo - SP - CEP: 01000-000</td>
+                </tr>
+                <tr>
+                    <td>📞 Telefone</td>
+                    <td>(11) 1234-5678</td>
+                </tr>
+                <tr>
+                    <td>📱 WhatsApp</td>
+                    <td>(11) 91234-5678</td>
+                </tr>
+                <tr>
+                    <td>📧 E-mail</td>
+                    <td>contato@amigofiel.com.br</td>
+                </tr>
+                <tr>
+                    <td>📸 Instagram</td>
+                    <td>@petshop.amigofiel</td>
+                </tr>
+            </tbody>
         </table>
 
-        <br>
-
+        <!-- Formulário de Contato -->
         <h3>Envie uma Mensagem</h3>
         <p>Preencha o formulário abaixo para entrar em contato conosco:</p>
 
-        <form>
-            <p>
-                <label for="nome"><strong>Nome:</strong></label><br>
-                <input type="text" id="nome" name="nome" size="40">
-            </p>
-            <p>
-                <label for="email"><strong>E-mail:</strong></label><br>
-                <input type="email" id="email" name="email" size="40">
-            </p>
-            <p>
-                <label for="telefone"><strong>Telefone:</strong></label><br>
-                <input type="tel" id="telefone" name="telefone" size="40">
-            </p>
-            <p>
-                <label for="assunto"><strong>Assunto:</strong></label><br>
-                <select id="assunto" name="assunto">
-                    <option value="">Selecione um assunto</option>
-                    <option value="agendamento">Agendamento de Serviço</option>
-                    <option value="produtos">Dúvidas sobre Produtos</option>
-                    <option value="orcamento">Solicitar Orçamento</option>
-                    <option value="reclamacao">Reclamação</option>
-                    <option value="outro">Outro</option>
-                </select>
-            </p>
-            <p>
-                <label for="mensagem"><strong>Mensagem:</strong></label><br>
-                <textarea id="mensagem" name="mensagem" rows="6" cols="45"></textarea>
-            </p>
-            <p>
-                <input type="submit" value="Enviar Mensagem">
-                <input type="reset" value="Limpar">
-            </p>
-        </form>
+        <div class="formulario-secao" style="max-width: 600px;">
+            <form>
+                <div class="mb-3">
+                    <label for="nome" class="form-label"><strong>Nome:</strong></label>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label"><strong>E-mail:</strong></label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                </div>
+                <div class="mb-3">
+                    <label for="telefone" class="form-label"><strong>Telefone:</strong></label>
+                    <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(11) 91234-5678">
+                </div>
+                <div class="mb-3">
+                    <label for="assunto" class="form-label"><strong>Assunto:</strong></label>
+                    <select class="form-select" id="assunto" name="assunto" required>
+                        <option value="">Selecione um assunto</option>
+                        <option value="agendamento">Agendamento de Serviço</option>
+                        <option value="produtos">Dúvidas sobre Produtos</option>
+                        <option value="orcamento">Solicitar Orçamento</option>
+                        <option value="reclamacao">Reclamação</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="mensagem" class="form-label"><strong>Mensagem:</strong></label>
+                    <textarea class="form-control" id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Enviar Mensagem</button>
+                <button type="reset" class="btn btn-secondary">Limpar</button>
+            </form>
+        </div>
 
         <br>
 
@@ -99,22 +121,28 @@
         <p>Estamos localizados no centro de São Paulo, próximo à estação de metrô. Fácil acesso por transporte público e estacionamento gratuito para clientes.</p>
     </main>
 
-    <br>
-
     <!-- RODAPÉ -->
-    <footer>
-        <hr>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="sobre.html">Sobre Nós</a> |
-            <a href="contato.html">Contato</a>
-        </nav>
-        <br>
-        <p>📍 Endereço: Rua dos Animais, 123 - Centro, São Paulo - SP</p>
-        <p>📞 Telefone: (11) 1234-5678 | 📧 E-mail: contato@amigofiel.com.br</p>
-        <p><small>&copy; 2026 PetShop Amigo Fiel - Todos os direitos reservados.</small></p>
+    <footer role="contentinfo">
+        <div class="container text-center">
+            <nav aria-label="Menu do rodapé">
+                <a href="index.html">Início</a> |
+                <a href="servicos.html">Serviços</a> |
+                <a href="cadastro.html">Cadastro</a> |
+                <a href="agendamento.html">Agendamento</a> |
+                <a href="sobre.html">Sobre Nós</a> |
+                <a href="contato.html">Contato</a>
+            </nav>
+            <br>
+            <p>📍 Endereço: Rua dos Animais, 123 - Centro, São Paulo - SP</p>
+            <p>📞 Telefone: (11) 1234-5678 | 📧 E-mail: contato@amigofiel.com.br</p>
+            <p><small>&copy; <span id="ano-atual">2026</span> PetShop Amigo Fiel - Todos os direitos reservados.</small></p>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS local -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript customizado -->
+    <script src="js/main.js"></script>
 
 </body>
 </html>

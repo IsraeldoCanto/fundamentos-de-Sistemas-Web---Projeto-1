@@ -3,94 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Serviços de banho, tosa e cuidados para pets no PetShop Amigo Fiel">
     <title>PetShop Amigo Fiel - Serviços</title>
+    <!-- Bootstrap CSS local -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- CABEÇALHO -->
-    <header>
-        <h1>🐾 PetShop Amigo Fiel</h1>
-        <p>Tudo para o bem-estar do seu pet!</p>
-        <hr>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="sobre.html">Sobre Nós</a> |
-            <a href="contato.html">Contato</a>
-        </nav>
-        <hr>
-    </header>
+    <!-- Link de acessibilidade: pular para o conteúdo principal -->
+    <a href="#conteudo-principal" class="skip-nav" aria-label="Pular para o conteúdo principal">Pular para o conteúdo</a>
 
-    <!-- CORPO DA PÁGINA -->
-    <main>
+    <!-- BARRA DE SAUDAÇÃO E RELÓGIO -->
+    <div id="saudacao" role="status" aria-live="polite">Carregando...</div>
+
+    <!-- NAVBAR BOOTSTRAP -->
+    <nav class="navbar navbar-expand-lg navbar-dark" role="navigation" aria-label="Menu principal">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🐾 PetShop Amigo Fiel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" aria-label="Página Inicial">Início</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="servicos.html" aria-label="Nossos Serviços">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro.html" aria-label="Cadastro de Cliente e Pet">Cadastro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agendamento.html" aria-label="Agendamento de Serviço">Agendamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html" aria-label="Sobre Nós">Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html" aria-label="Entre em Contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="conteudo-principal" class="container secao-conteudo" role="main">
         <h2>Nossos Serviços</h2>
         <p>Oferecemos diversos serviços para cuidar do seu pet com carinho e profissionalismo. Confira abaixo:</p>
 
-        <table border="1" cellpadding="10" cellspacing="0">
-            <tr>
-                <th>Serviço</th>
-                <th>Descrição</th>
-                <th>Valor</th>
-                <th>Tele-Busca</th>
-            </tr>
-            <tr>
-                <td><strong>Banho</strong></td>
-                <td>Banho completo com shampoo e condicionador especial para pets. Inclui secagem e perfume. Para cães e gatos de todos os portes.</td>
-                <td>R$ 60,00</td>
-                <td>Sim ✅</td>
-            </tr>
-            <tr>
-                <td><strong>Tosa</strong></td>
-                <td>Tosa higiênica ou completa, realizada por profissionais experientes. Diversos estilos de tosa disponíveis para cada raça.</td>
-                <td>R$ 80,00</td>
-                <td>Sim ✅</td>
-            </tr>
-            <tr>
-                <td><strong>Banho + Tosa</strong></td>
-                <td>Combo de banho completo com tosa. O pacote mais procurado pelos nossos clientes. Inclui hidratação dos pelos.</td>
-                <td>R$ 120,00</td>
-                <td>Sim ✅</td>
-            </tr>
-            <tr>
-                <td><strong>Consulta Veterinária</strong></td>
-                <td>Consulta com veterinário especializado. Avaliação geral de saúde, vacinação e orientações de cuidados para seu pet.</td>
-                <td>R$ 150,00</td>
-                <td>Não ❌</td>
-            </tr>
-            <tr>
-                <td><strong>Hospedagem (diária)</strong></td>
-                <td>Hospedagem com acomodação confortável, alimentação e passeios inclusos. Ideal para quando você precisa viajar.</td>
-                <td>R$ 90,00</td>
-                <td>Sim ✅</td>
-            </tr>
-            <tr>
-                <td><strong>Adestramento</strong></td>
-                <td>Sessões de adestramento com profissional certificado. Trabalho de obediência básica e correção de comportamento.</td>
-                <td>R$ 200,00</td>
-                <td>Não ❌</td>
-            </tr>
+        <!-- Tabela de serviços estilizada com Bootstrap -->
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Serviço</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th>Tele-Busca</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Banho</strong></td>
+                    <td>Banho completo com shampoo e condicionador especial para pets. Inclui secagem e perfume. Para cães e gatos de todos os portes.</td>
+                    <td>R$ 60,00</td>
+                    <td>Sim ✅</td>
+                </tr>
+                <tr>
+                    <td><strong>Tosa</strong></td>
+                    <td>Tosa higiênica ou completa, realizada por profissionais experientes. Diversos estilos de tosa disponíveis para cada raça.</td>
+                    <td>R$ 80,00</td>
+                    <td>Sim ✅</td>
+                </tr>
+                <tr>
+                    <td><strong>Banho + Tosa</strong></td>
+                    <td>Combo de banho completo com tosa. O pacote mais procurado pelos nossos clientes. Inclui hidratação dos pelos.</td>
+                    <td>R$ 120,00</td>
+                    <td>Sim ✅</td>
+                </tr>
+                <tr>
+                    <td><strong>Consulta Veterinária</strong></td>
+                    <td>Consulta com veterinário especializado. Avaliação geral de saúde, vacinação e orientações de cuidados para seu pet.</td>
+                    <td>R$ 150,00</td>
+                    <td>Não ❌</td>
+                </tr>
+                <tr>
+                    <td><strong>Hospedagem (diária)</strong></td>
+                    <td>Hospedagem com acomodação confortável, alimentação e passeios inclusos. Ideal para quando você precisa viajar.</td>
+                    <td>R$ 90,00</td>
+                    <td>Sim ✅</td>
+                </tr>
+                <tr>
+                    <td><strong>Adestramento</strong></td>
+                    <td>Sessões de adestramento com profissional certificado. Trabalho de obediência básica e correção de comportamento.</td>
+                    <td>R$ 200,00</td>
+                    <td>Não ❌</td>
+                </tr>
+            </tbody>
         </table>
 
-        <br>
-        <p><strong>Observação sobre Tele-Busca:</strong> Para os serviços com tele-busca disponível, buscamos e devolvemos seu pet no endereço informado, sem custo adicional (dentro de um raio de 10km).</p>
+        <div class="alert alert-info" role="alert">
+            <strong>Observação sobre Tele-Busca:</strong> Para os serviços com tele-busca disponível, buscamos e devolvemos seu pet no endereço informado, sem custo adicional (dentro de um raio de 10km).
+        </div>
+
+        <p>Deseja agendar um serviço? <a href="agendamento.html">Clique aqui para agendar</a>.</p>
     </main>
 
-    <br>
-
     <!-- RODAPÉ -->
-    <footer>
-        <hr>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="sobre.html">Sobre Nós</a> |
-            <a href="contato.html">Contato</a>
-        </nav>
-        <br>
-        <p>📍 Endereço: Rua dos Animais, 123 - Centro, São Paulo - SP</p>
-        <p>📞 Telefone: (11) 1234-5678 | 📧 E-mail: contato@amigofiel.com.br</p>
-        <p><small>&copy; 2026 PetShop Amigo Fiel - Todos os direitos reservados.</small></p>
+    <footer role="contentinfo">
+        <div class="container text-center">
+            <nav aria-label="Menu do rodapé">
+                <a href="index.html">Início</a> |
+                <a href="servicos.html">Serviços</a> |
+                <a href="cadastro.html">Cadastro</a> |
+                <a href="agendamento.html">Agendamento</a> |
+                <a href="sobre.html">Sobre Nós</a> |
+                <a href="contato.html">Contato</a>
+            </nav>
+            <br>
+            <p>📍 Endereço: Rua dos Animais, 123 - Centro, São Paulo - SP</p>
+            <p>📞 Telefone: (11) 1234-5678 | 📧 E-mail: contato@amigofiel.com.br</p>
+            <p><small>&copy; <span id="ano-atual">2026</span> PetShop Amigo Fiel - Todos os direitos reservados.</small></p>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS local -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript customizado -->
+    <script src="js/main.js"></script>
 
 </body>
 </html>
